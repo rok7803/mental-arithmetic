@@ -1,6 +1,7 @@
 import React from 'react';
 import Cookies from 'universal-cookie';
 import './App.css';
+import {Settings} from '../Settings/Settings';
 
 class App extends React.Component {
   constructor(props){
@@ -60,8 +61,10 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <h1>Mental Arithmetic</h1>
         <button onClick={this.setMyCat}>Set Cookie</button>
         <button onClick={this.removeMyCat}>Remove Cookie</button>
+        <Settings />
         {this.state.showCookiePolicy && <div className="Cookie-Policy">
           <p>This site uses cookies. To use this site proberly, you have to accept cookies.</p>
           <button onClick={this.setPolicy}>Accept Cookies</button>
